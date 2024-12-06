@@ -1,11 +1,9 @@
-input.onButtonPressed(Button.A, function () {
-    counter += 1
+let hungriness = 0
+basic.forever(function () {
+    if (input.buttonIsPressed(Button.A)) {
+        hungriness = hungriness + 1
+        basic.showNumber(hungriness)
+    } else if (input.buttonIsPressed(Button.B)) {
+        hungriness = 0
+    }
 })
-input.onButtonPressed(Button.AB, function () {
-    basic.showNumber(counter)
-})
-input.onButtonPressed(Button.B, function () {
-    counter += -1
-})
-let counter = 0
-let item = 0
